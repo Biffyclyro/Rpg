@@ -35,9 +35,9 @@ public class Armadura extends Item {
     }
     
     
-    
+   
     public void setSkill() {
-        this.skill = "Item comum";
+        this.skill = "Sem skill!!";
     }    
     
     
@@ -53,8 +53,21 @@ public class Armadura extends Item {
     public void setItemMagico(boolean itemMagico) {
         this.itemMagico = itemMagico;
     }
-
     
+    
+    @Override
+    public void setPreco(double preco) {
+        if(this.itemMagico==true){
+            super.setPreco(preco*5);
+        }else{
+            super.setPreco(preco);
+        }
+    }
+
+    @Override
+    public String toString(){
+        return "Nome: " + super.getNome() + " Skill: " + skill+ " Preco: "+ super.getPreco();
+    }
     
     
     

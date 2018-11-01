@@ -8,10 +8,12 @@ import model.Personagem;
 public class Test {
     public static void main(String[] args) {
         
-        Arma a1 = new Arma(12, "minha rola", true, "piroca");
+        Arma a1 = new Arma(12, "Furia", true, "Dragao e Tigre");
         a1.setPreco(50);
         
         Armadura arm1 = new Armadura(200, 100, true, "Poshan");
+        arm1.setSkill();
+        arm1.setPreco(200);
         
         Personagem p1 = new Personagem("fulano", 50, 300, "fisica", a1, arm1);
         
@@ -32,19 +34,30 @@ public class Test {
         p1.acidionarItem(i5);
         
         
+        exibePersonagem(p1);
         
         
         
-        System.out.println(a1.getPreco());
+    }
+    
+    
+    private static void exibePersonagem(Personagem p){
+        
+        System.out.println(p);
+        System.out.println("Arma: " +p.getArma());
+        System.out.println("Armadura: " + p.getArmadura());
+        System.out.println("\n");
+        System.out.println("Inventario:");
+        for(Item i : p.getInventario()){
+            inventario(i);
+        }
         
         
-        
-        
-        
-        
-        
-        
-        //System.out.println("");
+    }
+    
+    
+    private static void inventario(Item i){
+        System.out.println("Nome: " + i.getNome() + " Preco: " + i.getPreco());
     }
           
             

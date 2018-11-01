@@ -73,10 +73,16 @@ public class Personagem {
     }
     
     
-    public ArrayList<Item> getParticipante(){
+    public ArrayList<Item> getInventario(){
         return this.inventario;
     }
     
+    
+    
+    @Override
+    public String toString(){
+        return "Nome: " + nome + " Lv: " + lv + " Atk: "+ atk + " Classe: " + classe; 
+    }
     
     
     

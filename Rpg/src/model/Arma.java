@@ -44,7 +44,13 @@ public class Arma extends Item{
         }else{
             super.setPreco(preco);
         }
-    }     
+    }
+    
+    
+    @Override
+    public String toString(){
+        return "Nome: " + super.getNome() + " Skill: " + skill+ " Preco: "+ super.getPreco();
+    }
     
 
       
