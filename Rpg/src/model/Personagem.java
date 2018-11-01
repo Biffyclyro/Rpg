@@ -2,23 +2,26 @@ package model;
 
 import java.util.ArrayList;
 
-public class Personagem {
+public class Personagem extends ClassePersonagem {
     private String nome;
     private int lv;
-    private int atk;
-    private String classe;
+    private int atk;    
     private Arma arma;
     private Armadura armadura;
     private final ArrayList<Item> inventario = new ArrayList();
 
-    public Personagem(String nome, int lv, int atk, String classe, Arma arma, Armadura armadura) {
+    public Personagem(String nome, int lv, int atk, Arma arma, Armadura armadura, String tipo, int def, int defM) {
         this.nome = nome;
         this.lv = lv;
         this.atk = atk;
-        this.classe = classe;
         this.arma = arma;
         this.armadura = armadura;
+        setTipo(tipo);
+        setDef(def);
+        setDefM(defM);
     }
+
+    
 
     public String getNome() {
         return nome;
@@ -44,13 +47,7 @@ public class Personagem {
         this.atk = atk + arma.getAtk();
     }
 
-    public String getClasse() {
-        return classe;
-    }
-
-    public void setClasse(String classe) {
-        this.classe = classe;
-    }
+    
 
     public Arma getArma() {
         return arma;
@@ -79,10 +76,17 @@ public class Personagem {
     
     
     
+      
+    
+    
+    
     @Override
     public String toString(){
-        return "Nome: " + nome + " Lv: " + lv + " Atk: "+ atk + " Classe: " + classe; 
+        return "Nome: " + nome + " Lv: " + lv + " Atk: "+ atk + " Classe: " + 
+                super.getTipo() + " Def: " + super.getDef() + " DefM: " + super.getDefM();
     }
+
+   
     
     
     

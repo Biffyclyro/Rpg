@@ -15,7 +15,7 @@ public class Test {
         arm1.setSkill();
         arm1.setPreco(200);
         
-        Personagem p1 = new Personagem("fulano", 50, 300, "fisica", a1, arm1);
+        Personagem p1 = new Personagem("fulano", 50, 300, a1, arm1, "fisico", 2000, 2000);
         
         Item i1 = new Item("garra cega");
         i1.setPreco(20);
