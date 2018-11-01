@@ -66,7 +66,7 @@ public class Armadura extends Item {
 
     @Override
     public String toString(){
-        return "Nome: " + super.getNome() + " Skill: " + skill+ " Preco: "+ super.getPreco();
+        return "Armadura: "  + "Nome: " + super.getNome() + " Skill: " + skill+ " Preco: "+ super.getPreco();
     }
     
     

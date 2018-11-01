@@ -44,8 +44,8 @@ public class Test {
     private static void exibePersonagem(Personagem p){
         
         System.out.println(p);
-        System.out.println("Arma: " +p.getArma());
-        System.out.println("Armadura: " + p.getArmadura());
+        inventario(p.getArma());
+        inventario(p.getArmadura());
         System.out.println("\n");
         System.out.println("Inventario:");
         for(Item i : p.getInventario()){

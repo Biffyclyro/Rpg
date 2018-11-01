@@ -49,7 +49,7 @@ public class Arma extends Item{
     
     @Override
     public String toString(){
-        return "Nome: " + super.getNome() + " Skill: " + skill+ " Preco: "+ super.getPreco();
+        return"Arma: " + " Nome: " + super.getNome() + " Skill: " + skill+ " Preco: "+ super.getPreco();
     }
     
 
